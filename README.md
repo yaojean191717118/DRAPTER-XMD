@@ -2,7 +2,7 @@
 
 <!-- Glowing Header -->
 <p align="center">
-  <img src="[https://files.catbox.moe/9n2k7a.jpg)" height="40" width="100%">
+  <img src="[https://i.imgur.com/dBaSKWF.gif)" height="40" width="100%">
 </p>
 
 <h1 align="center">
@@ -10,7 +10,7 @@
 </h1>
 
 <p align="center">
-  <img src="[https://files.catbox.moe/9n2k7a.jpg)" height="40" width="100%">
+  <img src="[https://i.imgur.com/dBaSKWF.gif)" height="40" width="100%">
 </p>
 
 <!-- Banner Image -->
