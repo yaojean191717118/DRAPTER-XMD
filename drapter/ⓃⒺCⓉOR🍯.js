@@ -18,7 +18,7 @@ const ev = {
 };
 
 // Command registration function
-function adams(obj, fonctions) {
+function ⓃⒺCⓉOR🍯(obj, fonctions) {
     let infoComs = obj;
     if (!obj.categorie) infoComs.categorie = "General";
     if (!obj.reaction) infoComs.reaction = "🚀"; // Default reaction
@@ -27,5 +27,5 @@ function adams(obj, fonctions) {
     return infoComs;
 }
 
-module.exports = { adams, cm, ev };
-      
+module.exports = { ⓃⒺCⓉOR🍯, cm, ev };
+                                       
