@@ -1,115 +1,154 @@
+
 {
   "name": "DRAPTER-XMD",
-  "description": "ᴊᴀᴠᴀsᴄʀɪᴘᴛ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ ᴄʀᴇᴀᴛᴇᴅ ʙʏ ⓃⒺCⓉOR🍯 ",
-  "logo": "your image url",
-  "keywords": ["bot"],
+  "description": "simple WhatsApp bot developed by ⓃⒺCⓉOR🍯",
+  "keywords": ["bot", "node", "baileys", "whatsapp"],
+  "logo": "https://files.catbox.moe/9n2k7a.jpg",
+  "repository": "https://github.com/ekitale/maths-project",
   "success_url": "/",
-
-    "stack": "container",
+  "stack": "heroku-24",
   "env": {
-    "SESSION_ID": {
-      "description": "Put the session-id here.",
-      "required": true,
-      "value": ""
-    },  
-    
-    "ALIVE_IMG": {
-      "description": "paste your image url if you don't have you can use this public url.",
-      "required": true,
-      "value": "your image url"
-    }, 
-    
-    "ALIVE_MSG": {
-      "description": "paste your alive message hear.",
-      "required": true,
-      "value": "HI DEAR IM ONLINE.!!♻️"
-    },
-    
     "PREFIX": {
-      "description": "paste your bot prefix note! Don't apply null prefix.",
-      "required": true,
-      "value": "."
+      "description": "Choose your prefix for your bot",
+      "value": ".",
+      "required": true
     },
-    
-    "MODE": {
-      "description": "select your bot work type public-private-inbox-group.",
-      "required": true,
-      "value": "public"
-    }, 
-
-    "AUTO_VOICE": {
-      "description": "Make it true if you want bot auto voice.",
-      "required": true,
-      "value": "true"
-    }, 
-
-    "AUTO_REPLY": {
-      "description": "Make it true if you want bot auto reply.",
-      "required": true,
-      "value": "true"
-    }, 
-
-    "AUTO_STICKER": {
-      "description": "Make it true if you want bot auto sticker.",
-      "required": true,
-      "value": "false"
-    }, 
-
+    "AUTO_REJECT_CALL": {
+      "description": "Enter yes for your bot to auto reject calls",
+      "value": "no",
+      "required": false
+    },
+    "AUTO_BIO": {
+      "description": "Enter yes for your bot to auto update bio",
+      "value": "yes",
+      "required": false
+    },
     "AUTO_READ_STATUS": {
-      "description": "Make it true if you want bot auto auto_read_status.",
-      "required": true,
-      "value": "true"
-    }, 
-
-    "ANTI_LINK": {
-      "description": "Make it true if you want bot auto remove group link.",
-      "required": true,
-      "value": "true"
+      "description": "Your status will be read automatically (type yes to activate or no to deactivate)",
+      "value": "yes",
+      "required": false
     },
-
-    "ANTI_BAD": {
-      "description": "Make it true if you want bot auto delete bad words from group example xxx porn etc.",
-      "required": true,
-      "value": "false"
-    }, 
-
-    "FAKE_RECORDING": {
-      "description": "Make it true if you want bot fake record.",
-      "required": true,
-      "value": "true"
+    "AUTO_DOWNLOAD_STATUS": {
+      "description": "Status will be sent to your inbox automatically (type yes to activate or no to deactivate)",
+      "value": "no",
+      "required": false
     },
-
-    "AUTO_REACT": {
-      "description": "Make it true if you want bot AutoReact.",
-      "required": false,
-      "value": "false"
+    "AUTO_READ": {
+      "description": "Messages will be marked as read automatically (type yes to activate or no to deactivate)",
+      "value": "no",
+      "required": false
     },
-
-    "OWNER_REACT": {
-      "description": "Make it true if you want bot OwnerReact.",
-      "required": false,
-      "value": "false"
-    
-    }, 
-
     "BOT_NAME": {
-      "description": "write hear your name.",
-      "required": true,
-      "value": "✦『DRAPTER-XMD』✦"
-    }, 
-
-    "HEART_REACT": {
-      "description": "Make it true if you want bot only heart ♥️ emjois reaction .",
-      "required": true,
-      "value": "false"
+      "description": "Name for your bot",
+      "value": "DRAPTER-XMD",
+      "required": false
+    },
+    "BOT_IMAGE": {
+      "description": "Image URL for your bot menu",
+      "value": "https://files.catbox.moe/9n2k7a.jpg",
+      "required": false
+    },
+    "PUBLIC_MODE": {
+      "description": "Type yes for public mode or no for private mode",
+      "value": "yes",
+      "required": false
+    },
+    "HEROKU_API_KEY": {
+      "description": "Enter your Heroku API key to be able to control your vars",
+      "value": "",
+      "required": true 
+    },
+    "HEROKU_APP_NAME": {
+      "description": "Enter your Heroku app name to be able to control vars",
+      "value": "",
+      "required": true 
+    },
+    "OWNER_NUMBER": {
+      "description": "Enter your number eg, 2547xxxxxxx",
+      "value": "",
+      "required": true 
+    },
+   "STATUS_REACT_EMOJIS": {
+      "description": "Enter your auto like status emojis",
+      "value": "💚,🚀,🌎,✅",
+      "required": false 
+    },
+    "AUTO_REACT": {
+      "description": "Enter your auto react messages",
+      "value": "no",
+      "required": false 
+    },
+   "AUTO_REACT_STATUS": {
+      "description": "Enter yes for your bot to auto like status",
+      "value": "yes",
+      "required": false 
+    },
+    "OWNER_NAME": {
+      "description": "Owner name",
+      "value": "Ibrahim Adams",
+      "required": false
+    },
+    "SESSION_ID": {
+      "description": "Your session ID",
+      "value": "",
+      "required": true
+    },    
+    "STARTING_BOT_MESSAGE": {
+      "description": "Enable starting message (yes/no)",
+      "value": "yes",
+      "required": true
+    },
+    "PRESENCE": {
+      "description": "Presence mode: 1=online, 2=typing, 3=recording",
+      "value": "",
+      "required": false
+    },
+    "ANTIDELETE_SENT_INBOX": {
+      "description": "Enable anti-delete to be sent inbox (yes/no)",
+      "value": "yes",
+      "required": false
+    },
+   "ANTIDELETE_RECOVER_CONVENTION": {
+      "description": "Enable anti-delete deleted to recover in conversation (yes/no)",
+      "value": "no",
+      "required": false
+    },	  
+    "GROUPANTILINK": {
+      "description": "Enable anti-link in groups (yes/no)",
+      "value": "yes",
+      "required": false
+    },
+    "CHATBOT": {
+      "description": "Enable text chatbot (yes/no)",
+      "value": "no",
+      "required": false
+    },
+    "WELCOME_MESSAGE": {
+      "description": "Enable welcoming message in groups (yes/no)",
+      "value": "no",
+      "required": false
+    },
+    "GOODBYE_MESSAGE": {
+      "description": "Enable  goodbye in groups (yes/no)",
+      "value": "no",
+      "required": false
+    },
+    "AUDIO_CHATBOT": {
+      "description": "Enable audio chatbot (yes/no)",
+      "value": "no",
+      "required": false
     }
-
-},
-
-     "buildpacks": [
-        {
-            "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
-        }
-     ],
-  "stack": "heroku-24"
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
     }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+    }
+    
