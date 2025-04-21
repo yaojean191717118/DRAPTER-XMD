@@ -67,7 +67,7 @@ const setProfilePicture = async (m, sock) => {
           forwardingScore: 999,
           isForwarded: true,
           forwardedNewsletterMessageInfo: {
-            newsletterJid: '120363290715861418@newsletter',
+            newsletterJid: '0029Vb3zzYJ9xVJk0Y65c81W@newsletter',
             newsletterName: "ⓃⒺCⓉOR🍯",
             serverMessageId: 143
           }
