@@ -203,7 +203,7 @@ const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
+                  newsletterJid: '0029Vb3zzYJ9xVJk0Y65c81W@newsletter',
                   newsletterName: "Ethix-MD",
                   serverMessageId: 143
                 }
