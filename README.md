@@ -6,10 +6,6 @@
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=25&duration=3000&color=00FF00&background=000000&center=true&vCenter=true&width=600&lines=⚡+DRAPTER+XMD+VERSION;🔥+The+Best+Simple+WhatsApp+Bot+Across+The+Glob;💻+Crafted+by+ⓃⒺCⓉOR🍯;🍀+Next-Generation+Reliable+✅" alt="Typing Animation">
 </h1>
 
-<p align="center">
-  <img src="[https://i.imgur.com/dBaSKWF.gif)" height="40" width="100%">
-</p>
-
 <!-- Banner Image -->
 <p align="center">
   <a href="https://files.catbox.moe/c07f3s.jpeg">
