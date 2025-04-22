@@ -22,7 +22,7 @@ const config = {
   NOT_ALLOW: process.env.NOT_ALLOW !== undefined ? process.env.NOT_ALLOW === 'true' : true,
   MODE: process.env.MODE || "public",
   BOT_NAME: process.env.BOT_NAME || "DRAPTER-XMD",
-  MENU_IMAGE: process.env.MENU_IMAGE || "https://files.catbox.moe/kiy0hl.jpg",
+  MENU_IMAGE: process.env.MENU_IMAGE || "https://files.catbox.moe/mw30hn.jpg",
   DESCRIPTION: process.env.DESCRIPTION || "© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ⓃⒺCⓉOR🍯",
   OWNER_NAME: process.env.OWNER_NAME || "ⓃⒺCⓉOR🍯",
   OWNER_NUMBER: process.env.OWNER_NUMBER || "254725474072",
