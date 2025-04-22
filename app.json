@@ -68,8 +68,8 @@
     },
     "AUTO_TYPING": {
       "description": "make it true if you want bot to show typing",
-      "required": false,
-      "value": "false"
+      "required": true,
+      "value": "true"
     },
     "AUTO_RECORDING": {
       "description": "make it true if you want bot to show recording audio",
@@ -78,8 +78,8 @@
     },
     "ALWAYS_ONLINE": {
       "description": "make it true if you want bot to show always online",
-      "required": false,
-      "value": "false"
+      "required": true,
+      "value": "true"
     },
     "AUTO_BLOCK": {
       "description": "make it true if you want bot to auto block only 212 numbers",
@@ -94,7 +94,7 @@
     "PREFIX": {
       "description": "Your Bot Prefix default (.)",
       "required": false,
-      "value": "*"
+      "value": "."
     }
     },
     "buildpacks": [
