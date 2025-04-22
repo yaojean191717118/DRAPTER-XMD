@@ -124,7 +124,7 @@ Matrix.ev.on('connection.update', (update) => {
 
 > Simple, Straightforward, But Loaded With Features 🎲. Meet DRAPTER-XMD WhatsApp Bot.
 
-*Thanks for using popkid bot* 
+*Thanks for using DRAPTER-XMD bot* 
 
 > Join WhatsApp Channel: ⤵️  
 https://whatsapp.com/channel/0029Vb3zzYJ9xVJk0Y65c81W
