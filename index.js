@@ -119,7 +119,7 @@ Matrix.ev.on('connection.update', (update) => {
         if (initialConnection) {
             console.log(chalk.green("Connected Successfully DRAPTER-XMD 🤍"));
             Matrix.sendMessage(Matrix.user.id, { 
-                image: { url: "https://files.catbox.moe/kiy0hl.jpg" }, 
+                image: { url: "https://files.catbox.moe/mw30hn.jpg" }, 
                 caption: `*Hello there DRAPTER-XMD User! 👋🏻* 
 
 > Simple, Straightforward, But Loaded With Features 🎲. Meet DRAPTER-XMD WhatsApp Bot.
