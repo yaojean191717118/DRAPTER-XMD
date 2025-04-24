@@ -11,10 +11,20 @@ const alive = async (m, Matrix) => {
 
   const prefix = config.PREFIX;
   const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0].toLowerCase() : '';
-
   if (!['alive', 'uptime', 'runtime'].includes(cmd)) return;
 
-  const str = `*🤖 Bot Status: Online*\n*⏳ Uptime: ${timeString}*`;
+  const str = `
+╔═════════════════════╗
+║    🐝 𝗕𝗘𝗘-𝗡𝗘𝗖𝗧𝗢𝗥 𝗕𝗢𝗧 🐝     ║
+╚═════════════════════╝
+┃ ⚡ *Status:* ONLINE & ACTIVE
+┃ ⏱ *Uptime:* ${timeString}
+┃ 🔖 *Prefix:* ${prefix}
+┃ 👑 *Owner:* nectar
+┃ 🧠 *Powered by:* Matrix Engine
+┃ 🐾 *Buzzing Since:* ${new Date().toDateString()}
+╰═════════════════════╝
+`;
 
   await Matrix.sendMessage(m.from, {
     image: fs.readFileSync('./media/popkid.jpg'),
@@ -35,4 +45,3 @@ const alive = async (m, Matrix) => {
 };
 
 export default alive;
-  
