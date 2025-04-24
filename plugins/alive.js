@@ -21,7 +21,7 @@ const alive = async (m, Matrix) => {
 ┃ ⏱ *Uptime:* ${timeString}
 ┃ 🔖 *Prefix:* ${prefix}
 ┃ 👑 *Owner:* nectar
-┃ 🧠 *Powered by:* Matrix Engine
+┃ 🧠 *Powered by:* ⓃⒺCⓉOR🍯
 ┃ 🐾 *Buzzing Since:* ${new Date().toDateString()}
 ╰═════════════════════╝
 `;
