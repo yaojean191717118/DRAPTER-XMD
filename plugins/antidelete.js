@@ -1,40 +1,43 @@
-import config from '../config.cjs';
+// plugins/antidelete.js
 
-const messageStore = new Map(); // temporary memory store
+const config = require("../config");
 
-const antidelete = async (m, Matrix) => {
-  const ownerJid = Matrix.user?.id || 'owner@s.whatsapp.net'; // fallback just in case
+module.exports = {
+  name: "antidelete",
+  type: "event",
 
-  // Only store real messages, not system or bot's own
-  if (!m.isBaileys && !m.key.fromMe && m.message) {
-    messageStore.set(m.key.id, {
-      message: m,
-      chatId: m.key.remoteJid,
-    });
+  async handle({ sock, msg, store }) {
+    if (!msg || !msg.key || !msg.key.remoteJid || !msg.messageStubType) return;
 
-    setTimeout(() => {
-      messageStore.delete(m.key.id);
-    }, 5 * 60 * 1000); // auto-delete after 5 mins
-  }
+    // 0x65 = message deleted
+    if (msg.messageStubType === 0x65) {
+      const jid = msg.key.remoteJid;
+      const messageID = msg.key.id;
+      const sender = msg.key.participant || msg.key.remoteJid;
 
-  // Detect deleted message
-  if (m.messageStubType === 0x08) {
-    const deletedMsg = messageStore.get(m.key.id);
+      try {
+        const deletedMsg = await store.loadMessage(jid, messageID);
 
-    if (deletedMsg) {
-      const { message, chatId } = deletedMsg;
+        if (!deletedMsg) return;
 
-      await Matrix.sendMessage(ownerJid, {
-        text: `🚫 *Anti-Delete Alert*\n\nA message was deleted in chat: ${chatId}\n\nForwarding deleted message...`
-      });
+        const isGroup = jid.endsWith("@g.us");
+        const senderName = sender.split("@")[0];
+        const chatType = isGroup ? "👥 Group" : "👤 Private";
+        const location = isGroup ? `Group: ${jid}` : `Chat: ${jid}`;
 
-      await Matrix.sendMessage(ownerJid, message.message, {
-        quoted: message,
-      });
+        // Notify owner
+        const alert = `📛 *Anti-Delete Alert*\n\n👤 *Sender:* ${senderName}\n🔍 *Where:* ${chatType}\n🗑 *Message was deleted.*\n\n🔁 *Forwarded message below ↓*`;
 
-      messageStore.delete(m.key.id);
+        // Send alert
+        await sock.sendMessage(config.OWNER_NUMBER + "@s.whatsapp.net", { text: alert });
+
+        // Forward the actual deleted message to owner
+        await sock.forwardMessage(config.OWNER_NUMBER + "@s.whatsapp.net", deletedMsg, { force: true });
+
+      } catch (err) {
+        console.error("AntiDelete error:", err);
+      }
     }
-  }
+  },
 };
-
-export default antidelete;
+                                        
