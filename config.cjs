@@ -1,34 +1,39 @@
-// config.js
+// config.cjs
 const fs = require("fs");
 require("dotenv").config();
 
 const config = {
-  SESSION_ID: process.env.SESSION_ID || "nector~I9oUgKyJ#kOuae8ng6czmJ-SETB4PvcaOIzi5pTNwiH4xn73idLA",
-  PREFIX: process.env.PREFIX || '*',
-  AUTO_STATUS_SEEN: process.env.AUTO_STATUS_SEEN !== undefined ? process.env.AUTO_STATUS_SEEN === 'true' : true, 
-  AUTO_STATUS_REPLY: process.env.AUTO_STATUS_REPLY !== undefined ? process.env.AUTO_STATUS_REPLY === 'true' : true,
-  STATUS_READ_MSG: process.env.STATUS_READ_MSG || '',
-  AUTO_DL: process.env.AUTO_DL !== undefined ? process.env.AUTO_DL === 'true' : false,
-  AUTO_READ: process.env.AUTO_READ !== undefined ? process.env.AUTO_READ === 'true' : false,
-  AUTO_TYPING: process.env.AUTO_TYPING !== undefined ? process.env.AUTO_TYPING === 'true' : false,
-  AUTO_RECORDING: process.env.AUTO_RECORDING !== undefined ? process.env.AUTO_RECORDING === 'true' : false,
-  ALWAYS_ONLINE: process.env.ALWAYS_ONLINE !== undefined ? process.env.ALWAYS_ONLINE === 'true' : false,
-  AUTO_REACT: process.env.AUTO_REACT !== undefined ? process.env.AUTO_REACT === 'true' : false,
-   /*auto block only for 212 */
-  AUTO_BLOCK: process.env.AUTO_BLOCK !== undefined ? process.env.AUTO_BLOCK === 'true' : true,
-  
-  
-  REJECT_CALL: process.env.REJECT_CALL !== undefined ? process.env.REJECT_CALL === 'true' : false, 
-  NOT_ALLOW: process.env.NOT_ALLOW !== undefined ? process.env.NOT_ALLOW === 'true' : true,
-  MODE: process.env.MODE || "public",
-  BOT_NAME: process.env.BOT_NAME || "DRAPTER-XMD",
-  MENU_IMAGE: process.env.MENU_IMAGE || "https://files.catbox.moe/mw30hn.jpg",
-  DESCRIPTION: process.env.DESCRIPTION || "© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ⓃⒺCⓉOR🍯",
-  OWNER_NAME: process.env.OWNER_NAME || "ⓃⒺCⓉOR🍯",
-  OWNER_NUMBER: process.env.OWNER_NUMBER || "254725474072",
-  GEMINI_KEY: process.env.GEMINI_KEY || "AIzaSyCUPaxfIdZawsKZKqCqJcC-GWiQPCXKTDc",
-  WELCOME: process.env.WELCOME !== undefined ? process.env.WELCOME === 'true' : false, 
-};
+  // === Session & Command Settings ===
+  SESSION_ID: process.env.SESSION_ID || "DRAPTER-XMD~p5QVHAJB#zWQrFOWv3lo3eE2qbUzFe9ZRkBcqqSpM_UESj6yer1U",
+  PREFIX: process.env.PREFIX || '*',
+  MODE: process.env.MODE || "public", // public | private
 
+  // === Bot Identity ===
+  BOT_NAME: process.env.BOT_NAME || "DRAPTER-XMD",
+  OWNER_NAME: process.env.OWNER_NAME || "ⓃⒺCⓉOR🍯",
+  OWNER_NUMBER: process.env.OWNER_NUMBER || "254725474072",
+  DESCRIPTION: process.env.DESCRIPTION || "© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ⓃⒺCⓉOR🍯",
+  MENU_IMAGE: process.env.MENU_IMAGE || "https://files.catbox.moe/mw30hn.jpg",
+
+  // === Auto Features ===
+  AUTO_STATUS_SEEN: process.env.AUTO_STATUS_SEEN === 'false' ? false : true,
+  AUTO_STATUS_REPLY: process.env.AUTO_STATUS_REPLY === 'false' ? false : true,
+  AUTO_DL: process.env.AUTO_DL === 'true',
+  AUTO_READ: process.env.AUTO_READ === 'true',
+  AUTO_TYPING: process.env.AUTO_TYPING === 'true',
+  AUTO_RECORDING: process.env.AUTO_RECORDING === 'true',
+  ALWAYS_ONLINE: process.env.ALWAYS_ONLINE === 'true',
+  AUTO_REACT: process.env.AUTO_REACT === 'true',
+  AUTO_BLOCK: process.env.AUTO_BLOCK === 'false' ? false : true, // default true for 212 numbers
+  STATUS_READ_MSG: process.env.STATUS_READ_MSG || '',
+
+  // === Protection / Behavior Settings ===
+  REJECT_CALL: process.env.REJECT_CALL === 'true',
+  NOT_ALLOW: process.env.NOT_ALLOW === 'false' ? false : true, // default true
+
+  // === Extra Features / API Keys ===
+  GEMINI_KEY: process.env.GEMINI_KEY || "AIzaSyCUPaxfIdZawsKZKqCqJcC-GWiQPCXKTDc", // Already valid
+  WELCOME: process.env.WELCOME === 'true',
+};
 
 module.exports = config;
