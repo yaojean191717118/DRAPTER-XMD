@@ -35,7 +35,7 @@ const repo = async (m, gss) => {
             forwardingScore: 999,
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
-              newsletterJid: "0029Vb3zzYJ9xVJk0Y65c81W@newsletter",
+              newsletterJid: "120363395396503029@newsletter",
               newsletterName: "ⓃⒺCⓉOR🍯",
               serverMessageId: 143,
             },
@@ -56,7 +56,7 @@ const repo = async (m, gss) => {
             forwardingScore: 999,
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
-              newsletterJid: "0029Vb3zzYJ9xVJk0Y65c81W@newsletter",
+              newsletterJid: "120363395396503029@newsletter",
               newsletterName: "ⓃⒺCⓉOR🍯",
               serverMessageId: 143,
             },
