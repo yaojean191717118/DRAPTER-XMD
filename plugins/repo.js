@@ -28,7 +28,7 @@ const repo = async (m, gss) => {
       await gss.sendMessage(
         m.from,
         {
-          image: { url: "https://files.catbox.moe/kiy0hl.jpg" },
+          image: { url: "https://files.catbox.moe/i8c2ao.jpeg" },
           caption: formattedInfo,
           contextInfo: {
             mentionedJid: [m.sender],
@@ -36,7 +36,7 @@ const repo = async (m, gss) => {
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
               newsletterJid: "0029Vb3zzYJ9xVJk0Y65c81W@newsletter",
-              newsletterName: "Popkid",
+              newsletterName: "ⓃⒺCⓉOR🍯",
               serverMessageId: 143,
             },
           },
@@ -48,7 +48,7 @@ const repo = async (m, gss) => {
       await gss.sendMessage(
         m.from,
         {
-          audio: { url: "https://files.catbox.moe/5df4ei.m4v" },
+          audio: { url: "https://files.catbox.moe/i8c2ao.jpeg" },
           mimetype: "audio/mp4",
           ptt: true,
           contextInfo: {
