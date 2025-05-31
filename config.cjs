@@ -4,14 +4,14 @@ require("dotenv").config();
 
 const config = {
   // === Session & Command Settings ===
-  SESSION_ID: process.env.SESSION_ID || "DRAPTER-XMD~p5QVHAJB#zWQrFOWv3lo3eE2qbUzFe9ZRkBcqqSpM_UESj6yer1U",
-  PREFIX: process.env.PREFIX || '*',
+  SESSION_ID: process.env.SESSION_ID || "nector~Z8I3GagZ#6rQZvdGkTF2W595JW8VGrpazu3qpzLUVMVStDL-eLkQ",
+  PREFIX: process.env.PREFIX || '.',
   MODE: process.env.MODE || "public", // public | private
 
   // === Bot Identity ===
   BOT_NAME: process.env.BOT_NAME || "DRAPTER-XMD",
   OWNER_NAME: process.env.OWNER_NAME || "ⓃⒺCⓉOR🍯",
-  OWNER_NUMBER: process.env.OWNER_NUMBER || "254725474072",
+  OWNER_NUMBER: process.env.OWNER_NUMBER || "2250565929700",
   DESCRIPTION: process.env.DESCRIPTION || "© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ⓃⒺCⓉOR🍯",
   MENU_IMAGE: process.env.MENU_IMAGE || "https://files.catbox.moe/mw30hn.jpg",
 
